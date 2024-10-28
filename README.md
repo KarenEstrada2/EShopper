@@ -1,5 +1,5 @@
 # EShopper
-proyecto final
+Proyecto Final
 
 Sofware Punto de Venta de Ropa
 
