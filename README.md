@@ -1,2 +1,8 @@
 # EShopper
-proyecto sofware punto de venta de ropa
+proyecto final
+
+Sofware Punto de Venta de Ropa
+
+Creado por: Karen Estrada
+
+Fecha: 28 de octubre de 2024
