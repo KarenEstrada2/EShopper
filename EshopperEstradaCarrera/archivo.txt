@@ -1,0 +1,12 @@
+1, blusa,200,Dama
+2, lentes,380,Caballeros
+3, Playera Azul,250,Caballero
+4, Blusa ligera,100,Dama
+5, vestido,450,Damas
+7, Pijama,500,Niños
+, ,,
+8, Palazzo Rosa,250,Dama
+9, playera y pantalon animal,400,Niño
+10, zapatillas louis vuitton negras,3600,Dama
+11, zapatillas louis vuitton Rojas,4000,Caballero
+12, versace zapatillas lycia,5000,Dama
