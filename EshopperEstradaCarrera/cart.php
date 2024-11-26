@@ -1,3 +1,15 @@
+<?php
+   if (isset($_GET['producto'])){
+      $producto = $_GET['producto'];
+      $precio = $_GET['precio']; 
+      $file = @fopen("carritocompras.txt", "a"); 
+      fwrite($file, "$producto,$precio".PHP_EOL);
+      fclose($file); 
+   } else {
+      $producto = ""; 
+      $precio = "";
+   } 
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -123,16 +135,23 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php 
+  if(file_exists('carritocompras.txt')){
+    $content = trim(file_get_contents('carritocompras.txt'), PHP_EOL);
+    $lineas = explode(PHP_EOL, $content);
+    foreach($lineas as $linea){
+      list($productoE, $precioE) = explode(',', $linea);
+?>
 						<tr>
 							<td class="cart_product">
 								<a href=""><img src="images/cart/one.png" alt=""></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href="">Colorblock Scuba</a></h4>
+								<h4><a href=""><?php echo $productoE; ?></a></h4>
 								<p>Web ID: 1089772</p>
 							</td>
 							<td class="cart_price">
-								<p>$59</p>
+								<p><?php echo $precioE; ?></p>
 							</td>
 							<td class="cart_quantity">
 								<div class="cart_quantity_button">
@@ -142,12 +161,16 @@
 								</div>
 							</td>
 							<td class="cart_total">
-								<p class="cart_total_price">$59</p>
+								<p class="cart_total_price"><?php echo $precioE; ?></p>
 							</td>
 							<td class="cart_delete">
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
+						<?php
+					}
+				}
+				?>
 					</tbody>
 				</table>
 			</div>
@@ -169,7 +192,7 @@
 							<li>Total <span>$61</span></li>
 						</ul>
 							<a class="btn btn-default update" href="">Actualizar</a>
-							<a class="btn btn-default check_out" href="">Checar pedido</a>
+							<a class="btn btn-default check_out" href="vaciarcarrito.php" target="_blank">Vaciar carrito</a>
 					</div>
 				</div>
 			</div>

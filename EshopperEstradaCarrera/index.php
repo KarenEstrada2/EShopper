@@ -206,21 +206,24 @@
 										<div class="productinfo text-center">
 											<?php
 											$img= $BDProductos[$n];
+											$productoB= $BDProductos[$n+1];
+											$precioB= $BDProductos[$n+2];
 											?>
 											<img src="images/home/<?php echo $img;?>
-											.jpg" width="210" height="180" alt=""/>
+											.jpg" alt="" width="210" height="180"/>
 											<h2>
-											<?php echo '$' . $BDProductos [$n+2]; ?>
+											<?php echo $productoB;  ?>
 											</h2>
-											<p><?php echo $BDProductos [$n+1];?>
+											<p><?php echo $precioB; ?>
 											</p>
+											
 											<img src="images/home/product1.jpg" alt="" />
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2><?php echo '$'.$BDProductos [$n+1];?></h2>
-												<p><?php echo $BDProductos [$n+2]; ?></p>
-												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
+												<h2><?php echo $precioB;?></h2>
+												<p><?php echo $productoB; ?></p>
+												<a href=“cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>“ class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 											</div>
 										</div>
 								</div>								
