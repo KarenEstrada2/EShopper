@@ -1,0 +1,8 @@
+1, blusa,100,damas
+2, lentes,300,caballeros
+3, playera,250,caballeros
+4, blusa ligera,100,damas
+5, vestido,450,damas
+6, playeras manga larga,300,caballeros
+7, Pijama Negra,100,Dama
+8, Vestido pantalon,180,Dama
